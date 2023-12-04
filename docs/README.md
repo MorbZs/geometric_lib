@@ -102,3 +102,66 @@
 4) Добавлен комментарий к работе функций area и perimeter в файле rectangle.py (Хеш коммита - 805fce8)
 5) Добавлен комментарий к работе функций area и perimeter в файле square.py (Хеш коммита - ac5747a)
 6) Добавлен комментарий к работе функций area и perimeter в файле triangle.py (Хеш коммита - 8a54543)
+7) Добавлены unit-тесты для файлов circle.py, rectangle.py, square.py, triangle.py (Хеш коммита - bd616de)
+
+# Unit-tests
+Для проверки работы функций были созданы unit-тесты. Для каждого файла был создан файл с названием unittests_<фигура>.py. В каждом файле содержатся тесты 4 типов:
+1) тест при вводе аргументов подходящего типа и значения
+2) тест при вводе аргументов неподходящего типа
+3) тест при вводе нулевого значения аргумента
+4) тест при вводе аргументов с минусовым значением (фигуры с минусовыми сторонами не могут существовать)
+
+- ## unittest_circle.py
+    пройдено 4 из 8 тестов
+- ## unittest_rectangle.p
+    пройдено 4 из 12 тестов
+- ## unittest_square.py
+    пройдено 4 из 8 тестов
+- ## unittest_triangle.py
+    пройдено 4 из 14 тестов
+
+
+| тестируемый файл | функция файла | входные данные | результат теста |
+|------------------|---------------|----------------|-----------------|
+| circle.py        | area          | 6              | passed          |
+| circle.py        | area          | 0              | passed          |
+| circle.py        | area          | "6"            | failed          |
+| circle.py        | area          | -5             | failed          |
+| circle.py        | perimeter     | 6              | passed          |
+| circle.py        | perimeter     | 0              | passed          |
+| circle.py        | perimeter     | "6"            | failed          |
+| circle.py        | perimeter     | -5             | failed          |
+| rectangle.py     | area          | 4, 3           | passed          |
+| rectangle.py     | area          | 4, 0           | passed          |
+| rectangle.py     | area          | 0, 3           | passed          |
+| rectangle.py     | area          | "4", 3         | failed          |
+| rectangle.py     | area          | 4, "3"         | failed          |
+| rectangle.py     | area          | -5, 6          | failed          |
+| rectangle.py     | perimeter     | 4, 3           | passed          |
+| rectangle.py     | perimeter     | 4, 0           | failed          |
+| rectangle.py     | perimeter     | 0, 3           | failed          |
+| rectangle.py     | perimeter     | "4", 3         | failed          |
+| rectangle.py     | perimeter     | 4, "3"         | failed          |
+| rectangle.py     | perimeter     | -5, 6          | failed          |
+| square.py        | area          | 5              | passed          |
+| square.py        | area          | 0              | passed          |
+| square.py        | area          | "5"            | failed          |
+| square.py        | area          | -5             | failed          |
+| square.py        | perimeter     | 5              | passed          |
+| square.py        | perimeter     | 0              | passed          |
+| square.py        | perimeter     | "5"            | failed          |
+| square.py        | perimeter     | -5             | failed          |
+| triangle.py      | area          | 4, 3           | passed          |
+| triangle.py      | area          | 4, 0           | passed          |
+| triangle.py      | area          | 0, 3           | passed          |
+| triangle.py      | area          | "4", 3         | failed          |
+| triangle.py      | area          | 4, "3"         | failed          |
+| triangle.py      | area          | -5, 6          | failed          |
+| triangle.py      | perimeter     | 4, 3, 2        | passed          |
+| triangle.py      | perimeter     | 4, 3, 0        | failed          |
+| triangle.py      | perimeter     | 4, 0, 2        | failed          |
+| triangle.py      | perimeter     | 0, 3, 2        | failed          |
+| triangle.py      | perimeter     | "4", 3, 2      | failed          |
+| triangle.py      | perimeter     | 4, "3", 2      | failed          |
+| triangle.py      | perimeter     | 4, 3, "2"      | failed          |
+| triangle.py      | perimeter     | -4, 3, 2       | failed          |

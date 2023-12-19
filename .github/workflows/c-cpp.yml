@@ -17,15 +17,15 @@ jobs:
       run: ./configure
     - name: make
       run: make
-    - name: circe_test
+    - name: make check
+      run: make check
+    - name: make distcheck
+      run: make distcheck
+    - name: circle_test
       run: unittest_circle
     - name: rectangle_test
       run: unittest_rectangle
     - name: square_test
       run: unittest_square
-    - name: triangle
+    - name: triangle_triangle
       run: unittest_triange
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
